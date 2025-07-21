@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import LandingPage from './Pages/LandingPage';
 
 const App = () => {
   return (
-    <div className='text-8xl font-bold text-pink-200'>App</div>
-  )
-}
+    <BrowserRouter>
+      <LandingPage />
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
