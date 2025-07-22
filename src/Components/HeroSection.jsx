@@ -73,7 +73,7 @@ const Homepage = () => {
         }}
       >
         <div className="panel flex-shrink-0 h-full flex items-center justify ">
-        <div className="w-[650px] h-full flex flex-col items-start justify-center px-8 py-12 bg-[#2D3047]">
+        <div className="w-[850px] h-full flex flex-col items-start justify-center px-8 py-12 bg-[#2D3047]">
   <div className="flex flex-col mb-8">
     <div className="font-merriweather text-5xl mb-1 leading-tight tracking-wide text-[#419D78]">
       Where
@@ -111,7 +111,7 @@ const Homepage = () => {
             <img 
               ref={imageRef} 
               className='h-screen object-cover w-full origin-center'
-              src='https://readdy.ai/api/search-image?query=modern%2520tech%2520workspace%2520with%2520gradient%2520blue%2520to%2520purple%2520background%2C%2520minimalist%2520design%2C%2520showing%2520abstract%2520code%2520elements%2520and%2520UI%2520components%2520floating%2520on%2520the%2520right%2520side%2C%2520left%2520side%2520is%2520clean%2520with%2520smooth%2520gradient%2520for%2520text%2520placement%2C%2520professional%2520lighting%2C%2520high%2520quality%2520render&width=1600&height=800&seq=hero123&orientation=landscape' 
+              src='https://sdmntpreastus2.oaiusercontent.com/files/00000000-c8a8-61f6-b2b2-8cf461113337/raw?se=2025-07-21T13%3A58%3A18Z&sp=r&sv=2024-08-04&sr=b&scid=91a71f6d-bd8b-5d81-b970-62e42a86931c&skoid=0da8417a-a4c3-4a19-9b05-b82cee9d8868&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-21T12%3A14%3A35Z&ske=2025-07-22T12%3A14%3A35Z&sks=b&skv=2024-08-04&sig=1c67ladUbDvtfT3E5SAnfb7kpvQUbWsbq298A%2B8HgbM%3D' 
               alt=""
               style={{ 
                 transformOrigin: "center center",
@@ -122,8 +122,9 @@ const Homepage = () => {
           
           <div className="w-[65vw] flex-shrink-0 h-full flex items-start bg-yellow-200 relative">
             <div className="h-full w-full flex justify-center items-center">
-
+             <h1>hello</h1>
               <div className='absolute right-32 flex flex-col space-y-0' style={{ zIndex: 1 }}>
+
                 <div className='h-[40vh] w-[40vh]'>
                   <img className='object-cover h-full w-full' src="https://i.pinimg.com/736x/af/e6/9b/afe69bdb7911e1d4abd8d27a192cec6b.jpg" alt="" />
                 </div>
