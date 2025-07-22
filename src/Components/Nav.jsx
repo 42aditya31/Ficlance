@@ -1,38 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { RiMenu3Line, RiCloseLine, RiNotification3Line } from 'react-icons/ri';
 
 const Nav = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center">
+        {/* Logo and Hamburger */}
+        <div className="flex items-center justify-between w-full md:w-auto">
           <Link to="/" className="text-2xl font-['Pacifico'] text-primary">
             Ficlance
           </Link>
 
-          <nav className="hidden md:flex ml-10">
-            <Link to="/dashboard" className="px-4 py-2 text-gray-700 hover:text-primary font-medium">
-              Dashboard
-            </Link>
-            <Link to="/projects" className="px-4 py-2 text-gray-700 hover:text-primary font-medium">
-              Projects
-            </Link>
-            <Link to="/learning" className="px-4 py-2 text-gray-700 hover:text-primary font-medium">
-              Learning Path
-            </Link>
-            <Link to="/portfolio" className="px-4 py-2 text-gray-700 hover:text-primary font-medium">
-              Portfolio
-            </Link>
-          </nav>
+          {/* Hamburger - Mobile Only */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-2xl text-gray-700 md:hidden focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <RiCloseLine /> : <RiMenu3Line />}
+          </button>
         </div>
 
-        <div className="flex items-center space-x-4">
+        {/* Nav Links - Desktop */}
+        <nav className="hidden md:flex ml-10 space-x-4">
+          <Link to="/dashboard" className="px-3 py-2 text-gray-700 hover:text-primary font-medium">
+            Dashboard
+          </Link>
+          <Link to="/projects" className="px-3 py-2 text-gray-700 hover:text-primary font-medium">
+            Projects
+          </Link>
+          <Link to="/learning" className="px-3 py-2 text-gray-700 hover:text-primary font-medium">
+            Learning Path
+          </Link>
+          <Link to="/portfolio" className="px-3 py-2 text-gray-700 hover:text-primary font-medium">
+            Portfolio
+          </Link>
+        </nav>
+
+        {/* Right Section */}
+        <div className="hidden md:flex items-center space-x-4">
           <button className="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary/90 transition whitespace-nowrap">
             Start Simulation
           </button>
 
           <div className="relative w-10 h-10 flex items-center justify-center">
-            <i className="ri-notification-3-line text-gray-600 ri-lg"></i>
+            <RiNotification3Line className="text-gray-600 text-lg" />
             <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
           </div>
 
@@ -45,6 +60,29 @@ const Nav = () => {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white px-4 pb-4 shadow-md">
+          <nav className="flex flex-col space-y-2 mt-2">
+            <Link to="/dashboard" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary font-medium">
+              Dashboard
+            </Link>
+            <Link to="/projects" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary font-medium">
+              Projects
+            </Link>
+            <Link to="/learning" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary font-medium">
+              Learning Path
+            </Link>
+            <Link to="/portfolio" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary font-medium">
+              Portfolio
+            </Link>
+            <button className="mt-4 bg-primary text-white px-4 py-2 rounded-full font-medium hover:bg-primary/90 transition">
+              Start Simulation
+            </button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
