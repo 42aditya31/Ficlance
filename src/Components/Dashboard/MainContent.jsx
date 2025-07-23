@@ -10,6 +10,7 @@ import {
   RiArrowUpLine,
 } from 'react-icons/ri';
 import ProgressCard from "./ProgressCard";
+import MainGrid from "./MainGrid";
 
  const dashboardCards = [
   {
@@ -80,6 +81,7 @@ const MainContent = () => {
     </div>
 
       </div>
+      <MainGrid/>
     </main>
   );
 };
