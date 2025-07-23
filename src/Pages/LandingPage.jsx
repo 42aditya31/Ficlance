@@ -13,7 +13,7 @@ import Testimonials from '../Components/Testimonials'
 const LandingPage = () => {
   return (
     <div>
-      <Nav/>
+      {/* <Nav/> */}
       <HeroSection2/>
       <RoleCards/>
       <HowItWorks/>
