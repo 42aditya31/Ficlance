@@ -30,8 +30,11 @@ const plans = [
       "project-based learning with goals",
       "earn up to 500 points per project",
       "includes minor animations/interactions",
+        "live client feedback simulation",
+        "build a solid portfolio foundation",
+        "focus on real-world skills",
+        "get used to real deadlines",
       "live feedback loop with revision suggestions",
-      "project price: ₹800",
       "build resume-ready mini apps",
       "access to client communication simulator",
     ],
@@ -54,7 +57,12 @@ const plans = [
       "earn up to 1000 points per project",
       "priority access to future missions",
       "portfolio validation with GitHub repo integration",
-      "project price: ₹1200",
+        "unlock exclusive community features",
+        "access to advanced tutorials",
+        "priority support from mentors",
+        "early access to new features",
+        "special events and webinars",
+        "networking opportunities with industry pros",
       "unlock leaderboards + special badges",
     ],
     heightClass: "h-[720px]",
@@ -66,12 +74,16 @@ const plans = [
 const PriceSection = () => {
   return (
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8" id="pricing">
-      <div className="max-w-7xl mx-auto text-center mb-12">
-        <p className="text-gray-500 text-sm uppercase tracking-widest">options</p>
-        <h2 className="text-4xl sm:text-5xl font-light text-gray-900">
-          for <span className="font-medium">website development</span>
-        </h2>
-      </div>
+     <div className="max-w-7xl mx-auto text-center mb-12">
+  <p className="text-gray-500 text-sm uppercase tracking-widest">choose your mode</p>
+  <h2 className="text-4xl sm:text-5xl font-light text-gray-900">
+    Simulated <span className="font-medium">website dev journeys</span> for every level
+  </h2>
+  <p className="mt-4 text-base sm:text-lg text-gray-600">
+    From chill practice gigs to full-on pro missions, earn points, level up, and build a real portfolio.
+  </p>
+</div>
+
 
       <div className="grid gap-8 md:grid-cols-3 max-w-7xl mx-auto">
         {plans.map((plan, index) => (
