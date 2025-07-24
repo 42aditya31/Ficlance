@@ -7,6 +7,7 @@ import HeroSection2 from '../Components/HeroSecton2'
 import HowItWorks from '../Components/HowItWorks'
 import Integrations from '../Components/Integrations'
 import Nav from '../Components/Nav'
+import PriceSection from '../Components/PriceSection'
 import RoleCards from '../Components/RoleSection'
 import Testimonials from '../Components/Testimonials'
 
@@ -19,6 +20,7 @@ const LandingPage = () => {
       <HowItWorks/>
       <Feature/>
       <Integrations/>
+      <PriceSection/>
       <FreelanceCTA/>
       <Testimonials/>
       <Footer/>
