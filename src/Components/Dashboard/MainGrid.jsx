@@ -3,6 +3,7 @@ import InprogressProject from "./InprogressProject";
 import CompletedProject from "./CompletedProject";
 import UpcomingDeadlines from "./UpcomingDeadlines";
 import SkillsStatistics from "./SkillsStatistics";
+import AchievementBadges from "./AchievementBadges";
 
 const completedProjects = [
   {
@@ -73,6 +74,7 @@ const MainGrid = () => {
         <div className="p-4">
           <SkillsStatistics skills={skillsData} />
         </div>
+        <AchievementBadges/>
       </div>
     </div>
   );
