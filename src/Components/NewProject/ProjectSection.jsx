@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import ProjectCard from "./ProjectCard";
-import { FaCheck } from "react-icons/fa";
+import { FaCode, FaPlay } from "react-icons/fa";
+
 
 const ProjectSection = () => {
   const [selectedProject, setSelectedProject] = useState(1);
@@ -135,7 +136,7 @@ const displayedProjects = showAllProjects
   : projectsData.slice(0, 6);
 
   return (
-<section className="py-10 pb-24 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+<section className="py-10 bg-white m-8 rounded-2xl pb-24 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
   {/* Projects Grid */}
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
     {displayedProjects.map((project) => (
@@ -170,47 +171,50 @@ const displayedProjects = showAllProjects
 )}
 
   {/* Selected Project Summary Bar */}
-  {selectedProject && (
-    <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] z-50 bg-white border border-gray-300 shadow-2xl rounded-2xl px-6 py-4 backdrop-blur-md">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        
-        {/* Left Check Icon + Info */}
-        <div className="flex items-start sm:items-center gap-4">
-          <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center shadow">
-            <FaCheck className="text-white text-lg" />
-          </div>
-          <div>
-            <h4 className="text-base sm:text-lg font-semibold text-gray-900">
-              {
-                [...projectsData, ...additionalProjects].find(
-                  (p) => p.id === selectedProject
-                )?.title
-              }
-            </h4>
-            <p className="text-sm text-gray-600 mt-1">
-              {
-                [...projectsData, ...additionalProjects].find(
-                  (p) => p.id === selectedProject
-                )?.difficulty
-              }
-              {" • Est. "}
-              {
-                [...projectsData, ...additionalProjects].find(
-                  (p) => p.id === selectedProject
-                )?.estimatedHours
-              }{" "}
-              hours
-            </p>
-          </div>
+{selectedProject && (
+  <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] z-50 bg-white border border-gray-300 shadow-2xl rounded-2xl px-6 py-4 backdrop-blur-md transition-all duration-300">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+
+      {/* ✅ Left Code Icon + Info */}
+      <div className="flex items-start sm:items-center gap-4">
+        <div className="w-10 h-10 min-w-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-md">
+          <FaCode className="text-white text-lg" />
         </div>
 
-        {/* CTA Button */}
-        <button className="px-6 py-2 bg-[#2D3047] text-white text-sm sm:text-base font-semibold rounded-full hover:bg-[#1f2235] transition duration-200 shadow">
-          Start Simulating
-        </button>
+        <div>
+          <h4 className="text-base sm:text-lg font-semibold text-gray-900">
+            {
+              [...projectsData, ...additionalProjects].find(
+                (p) => p.id === selectedProject
+              )?.title
+            }
+          </h4>
+          <p className="text-sm text-gray-600 mt-1">
+            {
+              [...projectsData, ...additionalProjects].find(
+                (p) => p.id === selectedProject
+              )?.difficulty
+            }
+            {" • Est. "}
+            {
+              [...projectsData, ...additionalProjects].find(
+                (p) => p.id === selectedProject
+              )?.estimatedHours
+            }{" "}
+            hours
+          </p>
+        </div>
       </div>
+
+      {/* ✅ CTA Button with Play Icon */}
+      <button className="group inline-flex items-center gap-2 px-6 py-2 bg-[#2D3047] text-white text-sm sm:text-base font-semibold rounded-full hover:bg-[#1f2235] transition duration-200 shadow-md">
+        <FaPlay className="text-xs group-hover:scale-110 transition-transform duration-200" />
+        Start Simulating
+      </button>
     </div>
-  )}
+  </div>
+)}
+
 </section>
 
   );
