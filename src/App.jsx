@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './Pages/LandingPage';
 import Nav from './Components/Nav';
 import DashBoard from './Pages/DashBoard';
+import NewProject from './Pages/NewProject';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
   <Routes>
     <Route path="/" element={<LandingPage />} />
     <Route path="/dashboard" element={<DashBoard />} />
+    <Route path="/new-project" element={<NewProject />} />
   </Routes>
 </BrowserRouter>
   );

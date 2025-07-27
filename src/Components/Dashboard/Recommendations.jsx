@@ -3,6 +3,9 @@ import { RiFolderAddLine, RiRoadMapLine, RiTeamLine, RiArrowRightLine } from 're
 const Recommendations = () => {
   return (
     <div className="grid grid-cols-1 p-8 rounded-2xl bg-white gap-4">
+         <h2 class="text-lg font-semibold text-gray-900 mb-4">
+                Recommended For You
+              </h2>
       {/* Project Recommendation */}
       <div className="p-4 border border-gray-100 rounded-lg hover:border-primary/20 hover:bg-primary/5 transition">
         <div className="flex items-center mb-3">
