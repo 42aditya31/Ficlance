@@ -2,6 +2,7 @@ import React from "react";
 import InprogressProject from "./InprogressProject";
 import CompletedProject from "./CompletedProject";
 import UpcomingDeadlines from "./UpcomingDeadlines";
+import SkillsStatistics from "./SkillsStatistics";
 
 const completedProjects = [
   {
@@ -45,6 +46,15 @@ const deadlinesData = [
   },
 ];
 
+const skillsData = [
+  { name: "React.js", percent: 95 },
+  { name: "Node.js", percent: 70 },
+  { name: "UI/UX Design", percent: 75 },
+  { name: "Testing", percent: 80 },
+  { name: "API Design", percent: 85 },
+  { name: "TypeScript", percent: 65 },
+];
+
 const MainGrid = () => {
   const handleViewAll = () => {
     console.log("Redirect to all projects...");
@@ -52,11 +62,17 @@ const MainGrid = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
       <div className="lg:col-span-2">
-        <InprogressProject/>
-        <CompletedProject projects={completedProjects} onViewAll={handleViewAll} />
+        <InprogressProject />
+        <CompletedProject
+          projects={completedProjects}
+          onViewAll={handleViewAll}
+        />
       </div>
       <div class="space-y-6">
-<UpcomingDeadlines deadlines={deadlinesData} />
+        <UpcomingDeadlines deadlines={deadlinesData} />
+        <div className="p-4">
+          <SkillsStatistics skills={skillsData} />
+        </div>
       </div>
     </div>
   );
