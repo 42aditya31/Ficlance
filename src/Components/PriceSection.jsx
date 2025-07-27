@@ -21,6 +21,7 @@ const plans = [
   {
     name: "grind-mode",
     tagline: "real-life mini missions",
+    isPro: true,
     features: [
       "intermediate real-world projects (frontend/backend/UI)",
       "complex UI structures + responsive design",
@@ -32,8 +33,6 @@ const plans = [
       "includes minor animations/interactions",
         "live client feedback simulation",
         "build a solid portfolio foundation",
-        "focus on real-world skills",
-        "get used to real deadlines",
       "live feedback loop with revision suggestions",
       "build resume-ready mini apps",
       "access to client communication simulator",
