@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarBelowSection from "../Components/NewProject/Search";
 import SearchFilterSection from "../Components/NewProject/SearchFilterSection";
+import ProjectSection from "../Components/NewProject/ProjectSection";
 
 const NewProject = () => {
   return (
@@ -16,6 +17,7 @@ const NewProject = () => {
           onDurationChange={(duration) => console.log("Duration:", duration)}
         />
       </div>
+      <ProjectSection/>
     </div>
   );
 };
