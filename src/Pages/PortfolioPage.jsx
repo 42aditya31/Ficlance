@@ -12,6 +12,7 @@ const PortfolioPage = () => {
       <FeaturedProjects/>
       <SkillShowcase/>
       <JourneyTimeline/>
+      {/* <Testimonials/> */}
       <SharePortfolio/>
     </div>
   )
