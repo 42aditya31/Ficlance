@@ -4,6 +4,7 @@ import LandingPage from './Pages/LandingPage';
 import Nav from './Components/Nav';
 import DashBoard from './Pages/DashBoard';
 import NewProject from './Pages/NewProject';
+import PortfolioPage from './Pages/PortfolioPage';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
     <Route path="/" element={<LandingPage />} />
     <Route path="/dashboard" element={<DashBoard />} />
     <Route path="/new-project" element={<NewProject />} />
+    <Route path="/portfolio" element={<PortfolioPage />} />
   </Routes>
 </BrowserRouter>
   );

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { RiMenu3Line, RiCloseLine, RiNotification3Line } from 'react-icons/ri';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { RiMenu3Line, RiCloseLine, RiNotification3Line } from "react-icons/ri";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,10 +8,16 @@ const Nav = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+
         {/* Logo and Hamburger */}
         <div className="flex items-center justify-between w-full md:w-auto">
-          <Link to="/" className="text-2xl font-['Pacifico'] text-primary">
-            Ficlance
+          <Link to="/" className="flex h-20 items-center">
+            {/* <img
+              src="../../public/Logo.png"
+              alt="Ficlance Logo"
+              className="w-50  object-fill"
+            /> */}
+            <h1 className="font-bold text-4xl ">FicLance </h1>
           </Link>
 
           {/* Hamburger - Mobile Only */}
@@ -26,16 +32,28 @@ const Nav = () => {
 
         {/* Nav Links - Desktop */}
         <nav className="hidden md:flex ml-10 space-x-4">
-          <Link to="/dashboard" className="px-3 py-2 text-gray-700 hover:text-primary font-medium">
+          <Link
+            to="/dashboard"
+            className="px-3 py-2 text-gray-700 hover:text-primary font-medium"
+          >
             Dashboard
           </Link>
-          <Link to="/projects" className="px-3 py-2 text-gray-700 hover:text-primary font-medium">
+          <Link
+            to="/projects"
+            className="px-3 py-2 text-gray-700 hover:text-primary font-medium"
+          >
             Projects
           </Link>
-          <Link to="/learning" className="px-3 py-2 text-gray-700 hover:text-primary font-medium">
+          <Link
+            to="/learning"
+            className="px-3 py-2 text-gray-700 hover:text-primary font-medium"
+          >
             Learning Path
           </Link>
-          <Link to="/portfolio" className="px-3 py-2 text-gray-700 hover:text-primary font-medium">
+          <Link
+            to="/portfolio"
+            className="px-3 py-2 text-gray-700 hover:text-primary font-medium"
+          >
             Portfolio
           </Link>
         </nav>
@@ -65,16 +83,32 @@ const Nav = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white px-4 pb-4 shadow-md">
           <nav className="flex flex-col space-y-2 mt-2">
-            <Link to="/dashboard" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary font-medium">
+            <Link
+              to="/dashboard"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-700 hover:text-primary font-medium"
+            >
               Dashboard
             </Link>
-            <Link to="/projects" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary font-medium">
+            <Link
+              to="/projects"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-700 hover:text-primary font-medium"
+            >
               Projects
             </Link>
-            <Link to="/learning" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary font-medium">
+            <Link
+              to="/learning"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-700 hover:text-primary font-medium"
+            >
               Learning Path
             </Link>
-            <Link to="/portfolio" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary font-medium">
+            <Link
+              to="/portfolio"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-700 hover:text-primary font-medium"
+            >
               Portfolio
             </Link>
             <button className="mt-4 bg-primary text-white px-4 py-2 rounded-full font-medium hover:bg-primary/90 transition">
